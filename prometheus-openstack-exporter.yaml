@@ -21,3 +21,11 @@ schedulable_instance_size:
 swift_hosts:
     - host1.example.com
     - host2.example.com
+
+# If you need to filter metrics, set this value true
+whitelist_enabled: true
+# When whitelist_enabled is true, only metrics listed below are exported
+# TODO: We tested the following settings only. When you set another metrics, you may encounter some errors and need to fix them.
+whitelist:
+    nova:
+      - hypervisors
